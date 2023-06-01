@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <!-- background -->
+    <View
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/header"
+        app:layout_constraintBottom_toTopOf="@+id/main_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="0.3">
+
+    </View>
+
+    <View
+        android:id="@+id/main_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintVertical_weight="0.7" />
+
+    <!-- main section elements -->
+
+    <View
+        android:id="@+id/section_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/main_section"
+        app:layout_constraintBottom_toTopOf="@id/section_last_name_1"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintVertical_weight="0.16" />
+
+    <View
+        android:id="@+id/section_last_name_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/section_name"
+        app:layout_constraintBottom_toTopOf="@id/section_last_name_2"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintVertical_weight="0.16" />
+
+    <View
+        android:id="@+id/section_last_name_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/section_last_name_1"
+        app:layout_constraintBottom_toTopOf="@id/section_phone"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintVertical_weight="0.16" />
+
+    <View
+        android:id="@+id/section_phone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/section_last_name_2"
+        app:layout_constraintBottom_toBottomOf="@id/rest"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintVertical_weight="0.16" />
+
+    <View
+        android:id="@+id/rest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/section_phone"
+        app:layout_constraintBottom_toBottomOf="@id/main_section"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintVertical_weight="0.7" />
+
+
+    <!-- Elements -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/picture"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        app:layout_constraintTop_toTopOf="@id/header" />
+
+
+    <TextView
+        android:autoSizeTextType="uniform"
+        android:id="@+id/profile_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/input_name"
+        android:text="@string/profile_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/section_name"
+        app:layout_constraintBottom_toBottomOf="@id/section_name"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_2"
+        />
+
+    <TextView
+        android:autoSizeTextType="uniform"
+        android:id="@+id/profile_last_name_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/input_lastname_1"
+        android:text="@string/profile_last_name_1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/section_last_name_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_2"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintBottom_toBottomOf="@+id/section_last_name_1"
+        />
+
+    <TextView
+        android:autoSizeTextType="uniform"
+        android:id="@+id/profile_last_name_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/input_lastname_2"
+        android:text="@string/profile_last_name_2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/section_last_name_2"
+        app:layout_constraintEnd_toStartOf="@id/guideline_2"
+        app:layout_constraintStart_toStartOf="@id/guideline_1"
+        app:layout_constraintBottom_toBottomOf="@+id/section_last_name_2"
+        />
+
+    <TextView
+        android:autoSizeTextType="uniform"
+        android:id="@+id/profile_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/input_phone"
+        android:text="@string/profile_phone"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_2"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintTop_toTopOf="@+id/section_phone"
+        app:layout_constraintBottom_toBottomOf="@id/section_phone"
+        />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:autofillHints="name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/profile_name"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintStart_toEndOf="@id/guideline_3"
+        app:layout_constraintTop_toTopOf="@id/profile_name" />
+
+    <EditText
+        android:id="@+id/input_lastname_1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:autofillHints="last name"
+        android:inputType="text"
+        android:tooltipText="Hey!"
+        app:layout_constraintBottom_toBottomOf="@id/profile_last_name_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintStart_toEndOf="@id/guideline_3"
+        app:layout_constraintTop_toTopOf="@id/profile_last_name_1" />
+
+    <EditText
+        android:id="@+id/input_lastname_2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:autofillHints="last name 2"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/profile_last_name_2"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintStart_toEndOf="@id/guideline_3"
+        app:layout_constraintTop_toTopOf="@id/profile_last_name_2" />
+
+    <EditText
+        android:id="@+id/input_phone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:autofillHints="phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@id/profile_phone"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintStart_toEndOf="@id/guideline_3"
+        app:layout_constraintTop_toTopOf="@id/profile_phone" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/main_section"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@color/main_section"
+        app:cardCornerRadius="64dp"
+        android:="32dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_4"
+        app:layout_constraintStart_toEndOf="@id/guideline_1"
+        app:layout_constraintTop_toBottomOf="@id/section_phone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_save"
+        app:layout_constraintEnd_toEndOf="@id/btn_save"
+        app:layout_constraintStart_toStartOf="@id/btn_save"
+        app:layout_constraintTop_toTopOf="@id/btn_save" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".3" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".4" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
